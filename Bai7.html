@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<!--Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. -->
+<!--Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. -->
+<!--Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".-->
+<table id="idTable"></table>
+<script>
+    var idTable = document.getElementById("idTable");
+    var htmlStr = "";
+    htmlStr += "<tr>";
+    var dem = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            htmlStr += "<td>" + "FizzBuzz" + "</td>";
+        }else if (i % 3 == 0) {
+            htmlStr += "<td>" + "Fizz" + "</td>";
+        }else if (i % 5 == 0) {
+            htmlStr += "<td>" + "Buzz" + "</td>";
+        }else {
+            htmlStr += "<td>" + i + "</td>";
+        }
+        dem++;
+        if (dem==20 || dem==40 || dem==60 ||dem==80) {
+            htmlStr += "</tr>" + "<tr>";
+        }
+    }
+    htmlStr += "</tr>";
+    idTable.innerHTML = htmlStr;
+</script>
+<style>
+    td {
+
+        border: 2px solid black;
+    }
+
+    table {
+
+        text-align: center;
+        width: 1000px;
+        border: 2px solid black;
+    }
+</style>
+</body>
+</html>
