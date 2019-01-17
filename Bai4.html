@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+<script>
+
+    function fibo(number) {
+        if (number == 1 || number == 2) {
+            return 1;
+        } else {
+            return fibo(number - 1) + fibo(number - 2);
+        }
+    }
+    var i = 1;
+    while (true) {
+        var num = fibo(i);
+        if (num % 5 ==0) {
+            alert("Số Fibonacci đầu tiên chia hết cho 5 là : " + num);
+            break;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>
