@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+    <style>
+        #btn {
+            width:100px;
+            height: 45px;
+            margin-top: 25px;
+            margin-left: 750px;
+        }
+        h1 {
+            margin-top: 250px;
+            margin-left: 675px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hãy thử đoán xem!</h1>
+<input type="button"  id="btn" value="Bắt đầu" onclick="Start();">
+<script>
+    function Start() {
+        alert("Mời bạn nhập vào khoảng bạn muốn dự đoán ");
+        var khoangDau = parseInt(prompt("Mời bạn nhập vào khoảng đầu"));
+        var khoangCuoi = parseInt(prompt("Mời bạn nhập vào khoảng cuối"));
+        var numRandom = parseInt(Math.random()*(khoangCuoi -khoangDau) +khoangDau);
+        var numInp = parseInt(prompt("Mời bạn nhập vào số dự đoán"));
+        if (numInp == numRandom) {
+            alert("Chúc mừng bạn dự đoán chính xác");
+        }else {
+            alert("chúc bạn may mắn lần sau ! Số chính xác là : " + numRandom );
+        }
+    }
+</script>
+</body>
+</html>
