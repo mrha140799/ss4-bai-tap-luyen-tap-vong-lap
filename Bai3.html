@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<table id="idTable"></table>
+<script>
+    var idTable = document.getElementById("idTable");
+    var htmlStr = "";
+
+    function fibo(number) {
+        if (number == 1 || number == 2) {
+            return 1;
+        } else {
+            return fibo(number - 1) + fibo(number - 2);
+        }
+    }
+
+    for (var i = 1; i <= 20; i++) {
+
+        var tong = fibo(i);
+        htmlStr += "<td>" + tong + "</td>";
+    }
+    idTable.innerHTML = htmlStr;
+</script>
+<style>
+    td {
+
+        border: 2px solid black;
+    }
+
+    table {
+        margin-top: 250px;
+        margin-left: 300px;
+        text-align: center;
+        width: 1000px;
+        border: 2px solid black;
+    }
+</style>
+</body>
+</html>
